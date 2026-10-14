@@ -9,7 +9,6 @@ const ITEMS_EN = ["Japanese & Korean FDI", "SOEs & Institutions", "Family Groups
 export default function TrustBar() {
   const { lang } = useLang();
   const items = lang === "id" ? ITEMS_ID : ITEMS_EN;
-  const row = [...items, ...items];
 
   return (
     <section aria-label={lang === "id" ? "Dipercaya oleh" : "Trusted by"} className="bg-[#081426] border-y border-white/10 py-7 overflow-hidden">
@@ -22,8 +21,14 @@ export default function TrustBar() {
       </div>
       <div className="marquee-mask relative mt-5 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_12%,black_88%,transparent)]">
         <div className="marquee-track flex w-max items-center gap-12 pr-12">
-          {row.map((t, i) => (
-            <span key={`${t}-${i}`} className="flex items-center gap-12 whitespace-nowrap">
+          {items.map((t) => (
+            <span key={t} className="flex items-center gap-12 whitespace-nowrap">
+              <span className="font-display text-[19px] text-white/55 italic">{t}</span>
+              <span className="w-1 h-1 rounded-full bg-[#C9A96A]/60" />
+            </span>
+          ))}
+          {items.map((t) => (
+            <span key={`${t}-dup`} aria-hidden className="flex items-center gap-12 whitespace-nowrap">
               <span className="font-display text-[19px] text-white/55 italic">{t}</span>
               <span className="w-1 h-1 rounded-full bg-[#C9A96A]/60" />
             </span>

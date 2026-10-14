@@ -46,8 +46,8 @@ export default async function InsightPage({
             </svg>
             Kembali ke Wawasan
           </Link>
-          <p className="mt-8 text-[12px] text-white/45 tracking-[0.18em] uppercase font-medium">
-            {a.date} — Wijaya &amp; Partners · {a.body.id.join(" ").split(/\s+/).length > 300 ? "6" : "4"} min read
+          <p className="mt-8 text-[12px] text-white/60 tracking-[0.18em] uppercase font-medium">
+            {a.date} — Wijaya &amp; Partners · {Math.max(2, Math.round(a.body.id.join(" ").split(/\s+/).length / 200))} min read
           </p>
           <h1 className="font-display text-[32px] md:text-[48px] text-white mt-4 leading-[1.12]">
             {a.title.id}

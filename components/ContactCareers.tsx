@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLang } from "./LanguageContext";
 import Reveal from "./Reveal";
-import { IconMail, IconPhone, IconPin, IconClock, IconCheck, IconArrowRight } from "./icons";
+import { IconMail, IconPhone, IconPin, IconClock, IconCheck, IconArrowRight, IconShield } from "./icons";
 
 export default function ContactCareers() {
   const { lang } = useLang();
@@ -170,12 +170,14 @@ export default function ContactCareers() {
                   </div>
                 ))}
               </div>
-              <div className="mt-8 flex items-center gap-3 border border-[#C9A96A]/25 bg-[#C9A96A]/8 rounded-[12px] px-5 py-4">
-                <span className="w-2 h-2 rounded-full bg-[#4ade80] animate-pulse shrink-0" />
-                <p className="text-[13.5px] text-white/70">
+              <div className="mt-8 flex items-center gap-3 border border-white/12 bg-white/[0.04] rounded-[12px] px-5 py-4">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#C9A96A]/15 text-[#E8D5A8]">
+                  <IconShield width={18} height={18} />
+                </span>
+                <p className="text-[13.5px] text-white/70 leading-relaxed">
                   {lang === "id"
-                    ? "Kapasitas minggu ini: menerima 3 mandat korporasi baru."
-                    : "This week's capacity: accepting 3 new corporate mandates."}
+                    ? "Privilegi advokat–klien berlaku sejak konsultasi pertama. Dokumen Anda rahasia."
+                    : "Attorney–client privilege applies from the first consultation. Your documents stay confidential."}
                 </p>
               </div>
             </div>

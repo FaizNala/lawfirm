@@ -34,10 +34,9 @@ export default function Navbar() {
       <div
         className={`transition-all duration-500 border-b ${
           scrolled
-            ? "bg-[#0B1D33]/96 backdrop-blur-md border-[#C9A96A]/25 shadow-[0_12px_40px_-16px_rgba(0,0,0,0.55)]"
-            : "bg-[#0B1D33]/92 backdrop-blur-sm border-white/10"
+            ? "bg-[#0B1D33]/95 backdrop-blur-md border-[#C9A96A]/25 shadow-[0_12px_40px_-16px_rgba(0,0,0,0.55)]"
+            : "bg-[#0B1D33]/90 backdrop-blur-sm border-white/10"
         }`}
-        style={{ backgroundColor: scrolled ? "rgba(11,29,51,0.96)" : "rgba(11,29,51,0.94)" }}
       >
         <div className="mx-auto max-w-6xl px-6 h-[68px] flex items-center justify-between gap-6">
           <Link href="#top" className="flex items-center gap-3.5 group shrink-0" aria-label="Wijaya & Partners — home">
@@ -115,7 +114,7 @@ export default function Navbar() {
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className={`py-3.5 flex items-center justify-between text-[15px] ${
-                  i !== links.length - 1 ? "border-b border-white/8" : ""
+                  i !== links.length - 1 ? "border-b border-white/10" : ""
                 }`}
               >
                 {l.label}

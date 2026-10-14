@@ -62,13 +62,13 @@ export default function Insights() {
                 </span>
               </div>
               <div className="p-7 md:p-8">
-                <p className="text-[12.5px] text-white/50 tracking-wide">
+                <p className="text-[12.5px] text-white/65 tracking-wide">
                   {featured.date} · {readingMinutes(featured.body[lang])} {lang === "id" ? "mnt baca" : "min read"}
                 </p>
                 <h3 className="font-display text-[24px] md:text-[28px] leading-[1.2] mt-3 group-hover:text-[#E8D5A8] transition-colors">
                   {featured.title[lang]}
                 </h3>
-                <p className="text-[14.5px] text-white/60 mt-3 leading-relaxed">{featured.excerpt[lang]}</p>
+                <p className="text-[14.5px] text-white/70 mt-3 leading-relaxed">{featured.excerpt[lang]}</p>
                 <span className="inline-flex items-center gap-2 mt-5 text-[14px] font-semibold text-[#E8D5A8]">
                   {lang === "id" ? "Baca analisis" : "Read analysis"}
                   <IconArrowRight width={17} height={17} className="transition-transform duration-300 group-hover:translate-x-1.5" />

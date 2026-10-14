@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IMAGES } from "@/lib/content";
@@ -35,7 +36,7 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6 pb-14 pt-44 md:pt-52 w-full">
         <div className="max-w-3xl">
-          <div className="hero-rise flex items-center gap-3" style={{ "--hero-delay": "0ms" } as React.CSSProperties}>
+          <div className="hero-rise flex items-center gap-3" style={{ "--hero-delay": "0ms" } as CSSProperties}>
             <span className="inline-flex items-center gap-2 border border-[#C9A96A]/40 bg-[#C9A96A]/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-[12px] tracking-[0.14em] uppercase text-[#E8D5A8] font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C9A96A] animate-pulse" />
               {lang === "id" ? "Sejak 2008 · Jakarta · Bilingual ID–EN" : "Since 2008 · Jakarta · Bilingual ID–EN"}
@@ -44,7 +45,7 @@ export default function Hero() {
 
           <h1
             className="hero-rise font-display text-white text-[42px] leading-[1.02] md:text-[68px] mt-6"
-            style={{ "--hero-delay": "120ms" } as React.CSSProperties}
+            style={{ "--hero-delay": "120ms" } as CSSProperties}
           >
             {lang === "id" ? (
               <>
@@ -60,14 +61,14 @@ export default function Hero() {
 
           <p
             className="hero-rise mt-6 text-white/75 max-w-xl text-[17px] md:text-lg leading-[1.75]"
-            style={{ "--hero-delay": "240ms" } as React.CSSProperties}
+            style={{ "--hero-delay": "240ms" } as CSSProperties}
           >
             {lang === "id"
               ? "Korporasi, litigasi, dan kepatuhan — ditangani partner langsung, dengan bahasa yang dimengerti direksi. Respons 1×24 jam untuk urgensi."
               : "Corporate, litigation, and compliance — handled by partners directly, in language directors understand. 24-hour response for urgent matters."}
           </p>
 
-          <div className="hero-rise mt-9 flex flex-wrap items-center gap-3" style={{ "--hero-delay": "360ms" } as React.CSSProperties}>
+          <div className="hero-rise mt-9 flex flex-wrap items-center gap-3" style={{ "--hero-delay": "360ms" } as CSSProperties}>
             <Link
               href="#kontak"
               className="group inline-flex items-center gap-2.5 bg-[#C9A96A] text-[#0B1D33] px-7 py-[15px] rounded-[10px] font-semibold text-[15px] hover:bg-white transition-colors duration-300"
@@ -85,7 +86,7 @@ export default function Hero() {
 
           <div
             className="hero-rise mt-9 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-white/60"
-            style={{ "--hero-delay": "460ms" } as React.CSSProperties}
+            style={{ "--hero-delay": "460ms" } as CSSProperties}
           >
             <span className="inline-flex items-center gap-2">
               <IconShield width={16} height={16} className="text-[#C9A96A]" />
@@ -101,7 +102,7 @@ export default function Hero() {
         {/* Credibility strip — hairline-divided, not card metrics */}
         <div
           className="hero-rise mt-14 border-t border-[#C9A96A]/25 pt-7 grid grid-cols-2 md:grid-cols-4 gap-6"
-          style={{ "--hero-delay": "560ms" } as React.CSSProperties}
+          style={{ "--hero-delay": "560ms" } as CSSProperties}
         >
           {[
             ["18+", lang === "id" ? "Tahun mendampingi bisnis" : "Years advising business"],

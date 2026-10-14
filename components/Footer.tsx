@@ -5,7 +5,7 @@ import { useLang } from "./LanguageContext";
 import { IconMail, IconPhone, IconPin } from "./icons";
 
 export default function Footer() {
-  const { lang } = useLang();
+  const { lang, setLang } = useLang();
   return (
     <footer className="bg-[#050e1d] text-white/60 border-t border-[#C9A96A]/20">
       <div className="mx-auto max-w-6xl px-6 pt-16 pb-8 grid md:grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-10 text-[14px]">
@@ -94,13 +94,26 @@ export default function Footer() {
         <div className="mt-4 pb-8 pt-5 border-t border-white/10 flex flex-wrap justify-between gap-3 text-[12.5px] text-white/40">
           <p>© 2026 Wijaya &amp; Partners. All rights reserved.</p>
           <div className="flex gap-5">
+            <div className="flex gap-1.5 border border-white/15 rounded-full p-1" role="group" aria-label="Language">
+              {(["id", "en"] as const).map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  aria-pressed={lang === l}
+                  className={`px-2.5 py-1 rounded-full text-[11px] uppercase tracking-wider font-semibold transition-colors cursor-pointer ${
+                    lang === l ? "bg-[#C9A96A] text-[#0B1D33]" : "text-white/50 hover:text-white"
+                  }`}
+                >
+                  {l}
+                </button>
+              ))}
+            </div>
             <span className="hover:text-white/70 transition-colors cursor-pointer">
               {lang === "id" ? "Privasi" : "Privacy"}
             </span>
             <span className="hover:text-white/70 transition-colors cursor-pointer">
               {lang === "id" ? "Syarat Layanan" : "Terms"}
             </span>
-            <span>ID / EN</span>
           </div>
         </div>
       </div>

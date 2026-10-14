@@ -68,7 +68,7 @@ export default function People() {
                 <div className="p-5">
                   <h3 className="font-display text-[18px] text-white leading-snug">{p.name}</h3>
                   <div className="mt-2.5 h-px w-8 bg-[#C9A96A]/70 group-hover:w-full transition-all duration-500" />
-                  <p className="text-white/55 text-[13.5px] mt-2.5 leading-relaxed">{p.expertise[lang]}</p>
+                  <p className="text-white/70 text-[13.5px] mt-2.5 leading-relaxed">{p.expertise[lang]}</p>
                 </div>
               </article>
             </Reveal>
